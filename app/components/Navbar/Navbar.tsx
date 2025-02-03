@@ -78,10 +78,10 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li>
-                  <Link href="/OrderConfirmation" className="hover:border-b-2 border-black hover:scale-105 transition-transform duration-500">
+{/*                   <Link href="/OrderConfirmation" className="hover:border-b-2 border-black hover:scale-105 transition-transform duration-500">
                   Orders
                     </Link>
-                  </li>
+                  </li> */}
                  
                 </ul>
                 <span className=" hidden lg:flex flex-row items-center gap-2">
@@ -119,11 +119,11 @@ export default function Navbar() {
                       Questions
                     </Link>
                   </li>
-                  <li>
+{/*                   <li>
                     <Link href="/OrderConfirmation" className="hover:border-b-2 border-black">
                     Orders
                     </Link>
-                  </li>
+                  </li> */}
                  
                 </ul>
                 <span className="flex flex-col items-center">
