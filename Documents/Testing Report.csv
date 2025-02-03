@@ -1,0 +1,10 @@
+TEST CASE,Description,Test Steps,Expected Result,Actual Result,Status,Severity level,Assigned to,remarks
+TC_01,checking the time the website takes to load,Open the website ,Website opens up around 3 seconds,website opens in 3 seconds,passed,low,hassaan,No issue found
+TC_02,check the data is correctly displayed on each page,Check each page for data,All page should show data correctly,Missing image on about page,failed,medium,hassaan,handled gracefully
+TC_03,Check for product dynamic routing,Check dynamic page for each product,all product page should open with detail dynamically,every product dynamic page is avalible,passed,low,hassaan,No issue found
+TC_04,API error handling,disconnect API to check error hadling,message appear stating the error,message appeared stating the error,passed,medium,hassaan,improvement can be made
+TC_05,Checking cart functionality,Adding items to cart,items get added to cart,items does get added to cart,passed,high,hassaan,works as expected
+TC_06,Checking cart notification,Adding/removing items to cart,a pop up message on side of screen of action being performed successfully,notification poped up,passed,low,hassaan,no issues found
+TC_07,ensure cross browser performance,open web in different browsers,should work properly on every browser,works properly,passed,medium,hassaan,No issue found
+TC_08,"Website performance, loading time on different devices",use websites like lighthouse etc to check performance,score in 90's for both small and large device,score in 90's for both,passesd,medium,hassaan,no issue found
+TC_09,responsiveness on different device,check website on different sizes,should be rsponsive for all devices,is responsive for deivces,passed,medium,hassaan,no issue found
