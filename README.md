@@ -71,13 +71,9 @@ This step ensured that the website was stable, secure, and ready for public acce
 
 ---
 
-### Conclusion
-Each day of the hackathon built upon the progress of the previous day, fostering a deep understanding of project management and technical implementation. By the end of the 6th day, i had a fully functional, performance-optimized website ready for launch, showcasing the power of effective planning.
-
 ### Day 7: **Business Pitch Deck Creation**
 On the final day of the hackathon, I focused on crafting a compelling business pitch deck to present the project. The tasks included:  
-- Defining the project’s value proposition and how it solves a specific problem for its target audience.  
-- Highlighting the unique features of the website and its technical architecture, including the use of Sanity.io as the CMS.  
+- Defining the project’s value proposition and how it solves a specific problem for its target audience.   
 - Developing a clear business model, including potential revenue streams and market analysis.  
 - Creating slides with visual aids, such as product screenshots, flowcharts, and statistics, to support the pitch.  
 - Practicing the pitch to ensure clear communication and a persuasive presentation.  
