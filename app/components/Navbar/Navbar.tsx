@@ -77,8 +77,8 @@ export default function Navbar() {
                       Questions
                     </Link>
                   </li>
-                  <li>
-{/*                   <Link href="/OrderConfirmation" className="hover:border-b-2 border-black hover:scale-105 transition-transform duration-500">
+{/*                   <li>
+                  <Link href="/OrderConfirmation" className="hover:border-b-2 border-black hover:scale-105 transition-transform duration-500">
                   Orders
                     </Link>
                   </li> */}
