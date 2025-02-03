@@ -2,7 +2,8 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { client } from "@/sanity/lib/client";
-import { Product , Order } from "../types/product";
+import { Product, Order } from "../types/product";
+import Image from "next/image";
 
 const Dashboard = () => {
   const [orders, setOrders] = useState<Order[]>([]);
@@ -10,7 +11,7 @@ const Dashboard = () => {
   const [productCount, setProductCount] = useState<number>(0);
   const [orderCount, setOrderCount] = useState<number>(0);
   const [customization, setCustomization] = useState<boolean>(false);
-  
+
   const router = useRouter();
 
   useEffect(() => {
@@ -25,7 +26,22 @@ const Dashboard = () => {
         setOrders(ordersData);
         setOrderCount(ordersData.length);
 
-        const productsData = await client.fetch('*[_type == "products"]');
+        const productsData = await client.fetch(
+          `
+          *[_type == "products"]{
+            _id,
+            title,
+            description,
+            price,
+            "image_url": image.asset->url,
+            inventory,
+            priceWithoutDiscount,
+            tags,
+            badge,
+            userId
+          }
+          `
+        );
         setProducts(productsData);
         setProductCount(productsData.length);
       } catch (error) {
@@ -57,7 +73,7 @@ const Dashboard = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="flex flex-row items-center align-middle md:flex-col md:w-full gap-4">
         <div className="bg-white p-6 shadow-lg rounded-lg">
           <h2 className="text-xl font-semibold">Orders</h2>
           <p className="text-2xl">{orderCount} Orders</p>
@@ -76,9 +92,19 @@ const Dashboard = () => {
           <h2 className="text-xl font-semibold">Products</h2>
           <p className="text-2xl">{productCount} Products</p>
           {products.length > 0 && (
-            <ul className="mt-4">
+            <ul className="mt-4 p-2 grid grid-cols-1 md:grid-cols-3 md:gap-4">
               {products.map((product: Product) => (
                 <li key={product._id} className="text-sm">
+                  {product.image_url ? (
+                    <Image
+                      src={product.image_url}
+                      alt={product.title}
+                      width={300}
+                      height={200}
+                    />
+                  ) : (
+                    <div className="w-[300px] h-[200px] bg-gray-300 flex items-center justify-center text-white">No Image</div> // Fallback content
+                  )}
                   <strong>{product.title}</strong> - Price: ${product.price} - Inventory: {product.inventory}
                 </li>
               ))}
