@@ -73,7 +73,7 @@ const Dashboard = () => {
         </button>
       </div>
 
-      <div className="flex flex-col items-center align-middle md:flex-col md:w-full gap-4">
+      <div className="flex flex-col items-center align-middle  md:w-full gap-4">
         <div className="bg-white p-6 shadow-lg rounded-lg">
           <h2 className="text-xl font-semibold">Orders</h2>
           <p className="text-2xl">{orderCount} Orders</p>
