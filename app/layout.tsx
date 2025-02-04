@@ -22,6 +22,14 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Comforty",
   description: "Where style meets comfort",
+  icons: {
+    icon: [
+      { rel: "apple-touch-icon", sizes: "180x180", url: "/images/apple-touch-icon.png" },
+      { rel: "icon", type: "image/png", sizes: "32x32", url: "/images/favicon-32x32.png" },
+      { rel: "icon", type: "image/png", sizes: "16x16", url: "/imagesfavicon-16x16.png" },
+    ],
+  },
+  manifest: "/images/site.webmanifest",
 };
 
 export default function RootLayout({
